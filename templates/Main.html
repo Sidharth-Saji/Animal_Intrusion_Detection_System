@@ -4,7 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Forest Fire Detection</title>
+    <title>Audio Classification</title>
+    <style>
+        /* CSS to adjust font size */
+        #end h4 {
+            font-size: 30px;
+        }
+    </style>
     <link rel="stylesheet" type="text/css" href="../static/Main.css">
 </head>
 
@@ -15,23 +21,23 @@
                 <a href="#top">HOME</a>
             </span>
             <span class="span1">
-                <a href="#end">CONTACT US</a>
+                <a href="#end"> Project_Student </a>
             </span>
         </div>
         <div class="transbox">
-            <img id="previewImage" src="#" alt="Preview" style="display:none;">
+            <h2 id="previewImage" alt="Preview" style="display:none"> </h2>
             <form id="imageForm" enctype="multipart/form-data">
                 <input type="file" id="audioInput" accept="audio/*" onchange="handleImageSelection(event)">
                 <button type="button" onclick="processAudio()">Process Image</button>
-                <h1 id="result"></h1>
+                <h1 style="color:rgb(255, 255, 255)" id="result"></h1>
             </form>
         </div>
     </div>
     <footer id="end">
-        <h4 id="h">The Contributers</h4>
-        <p id="p">Sidharth Saji - </p>
-        <p id="p">Yashwanth Mori -</p>
-        <p id="p">Nishant Thakur -</p>
+        <h4 id="h"> Animal Sound Recognition for Crop and Farm Surveillance </h4>
+        <p id="p"> Sidharth Saji </p>
+        <p id="p"> 122201026 </p>
+
     </footer>
     <script>
         function handleImageSelection(event) {
@@ -40,8 +46,10 @@
 
             reader.onload = function () {
                 const previewImage = document.getElementById('previewImage');
-                previewImage.src = reader.result;
+                previewImage.textContent = "Audio has been selected";
                 previewImage.style.display = 'block';
+                previewImage.style.color = 'white';
+                previewImage.style.fontSize = '30px';
             }
 
             if (file) {
@@ -62,7 +70,7 @@
             })
                 .then(response => response.json())
                 .then(result => {
-                    resultText.textContent = result.message;
+                    resultText.textContent = Object.entries(result)[0][1];
                 })
                 .catch(error => {
                     resultText.textContent = 'Error: ' + error;

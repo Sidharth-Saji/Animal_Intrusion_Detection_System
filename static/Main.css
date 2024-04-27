@@ -8,7 +8,7 @@ body {
    background-position: center;
    border: none;
    background-color: palegoldenrod;
-   background-image: url('https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43017-021-00239-8/MediaObjects/43017_2021_239_Figa_HTML.png');
+   background-image: url('https://cff2.earth.com/uploads/2017/09/18122950/Scientists-successfully-transfer-light-waves-into-sound-waves.jpg  ');
 }
 
 .div1 {
@@ -20,19 +20,20 @@ body {
    border: none;
    font-weight: bold;
    z-index: 2;
-   background-color: #694734;
+   background-color: #000000dc;
    position: fixed;
    opacity: 0.9;
 }
 
 .span1 {
    display: inline;
-   color: black;
+   color: rgb(255, 255, 255);
+
    padding-left: 20px;
 }
 
 .span1 a {
-   color: black;
+   color: rgb(255, 255, 255);
    text-decoration: none;
 }
 
@@ -58,7 +59,7 @@ body {
 }
 
 .transbox:hover {
-   opacity: 0.7;
+   opacity: 0.8;
 }
 
 #imageInput {
@@ -79,20 +80,24 @@ body {
 
 #end {
    background-color: black;
-   color: yellow;
-   opacity: 0.8;
+   color: rgb(255, 255, 255);
+   opacity: 0.5;
    position: absolute;
    left: 0;
    bottom: -270px;
    width: 100%;
+   font-weight: bold;
+
 }
 
 #h {
-   padding-left: 45%;
+   padding-left: 25%;
+   font-weight: bold;
 }
 
 #p {
    padding-left: 20px;
+   font-weight: bold;
 }
 
 #headed {

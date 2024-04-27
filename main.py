@@ -48,7 +48,7 @@ def html_file():
 @app.route('/process_audio', methods=['POST'])
 def processAudio():
 
-    image_upload = request.files['image']
+    image_upload = request.files['audio']
     file_path = 'Imagefile/' + image_upload.filename
 
     # Create a directory if it doesn't exist
@@ -62,7 +62,6 @@ def processAudio():
 
     # Make predictions using the Wildfire Model
     predictions = label_dict[np.argmax(model.predict(y, batch_size=1))] 
-
     os.remove(file_path)
     print(predictions)
     # Process the predictions
